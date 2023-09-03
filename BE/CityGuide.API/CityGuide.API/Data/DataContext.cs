@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CityGuide.API.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CityGuide.API.Data
 {
@@ -9,6 +10,8 @@ namespace CityGuide.API.Data
 
         }
 
-        //public DbSet<User> Users  { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Photo> Photos { get; set; }
     }
 }
