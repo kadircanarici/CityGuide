@@ -33,7 +33,7 @@ namespace CityGuide.API.Controllers
         public IActionResult GetCityById(int id)
         {
             var city = _appRepository.GetCityById(id);
-            var cityToReturn = _mapper.Map<List<CityForDetailDto>>(city);
+            var cityToReturn = _mapper.Map<CityForDetailDto>(city);
 
             return Ok(cityToReturn);
         }
