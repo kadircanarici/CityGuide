@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxGalleryModule } from 'ngx-gallery';
+// import { NgxGalleryModule } from 'ngx-gallery';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,8 +19,7 @@ import { CityDetailComponent } from "./city/city-detail/city-detail.component";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    NgxGalleryModule
+    HttpClientModule
   ],
     providers: [],
   bootstrap: [AppComponent]

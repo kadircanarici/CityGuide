@@ -1,0 +1,29 @@
+/* Galeri konteyneri */
+.gallery {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Resimler arasındaki boşluk */
+  }
+  
+  /* Resimler */
+  .gallery img {
+    width:300px;
+    height: 200px;
+    border: 2px solid #ccc; /* Resim çerçevesi */
+    border-radius: 8px; /* Köşeleri yuvarlak yapar */
+    transition: transform 2.5s ease; /* Hover efekti için geçiş ekler */
+  
+    /* İstediğiniz diğer stil özelliklerini burada ekleyebilirsiniz */
+  }
+  
+  /* Resimlerin üzerine gelindiğinde */
+  .gallery img:hover {
+    transform: scale(1.0); /* Büyütme efekti ekler */
+    border-color: #f00; /* Hover sırasında çerçeve rengini değiştirir */
+    transform: translate(25%, 25%); /* Tam ortala */
+    width: 100%;
+    height: 100%;
+    
+  }
+  
