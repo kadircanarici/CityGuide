@@ -33,9 +33,12 @@
           </div>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-sm-2" type="search" placeholder="Search" />
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+      <form *ngIf="!isAuthenticated" #loginForm="ngForm" (ngSubmit)="login()" class="d-flex">
+        <input class="form-control me-sm-2" name="userName" [(ngModel)]="loginUser.userName" required type="text"
+          placeholder="User Name" />
+        <input class="form-control me-sm-2" name="password" [(ngModel)]="loginUser.password" required type="password"
+          placeholder="password" />
+        <button class="btn btn-secondary my-2 my-sm-0" [disabled]="!loginForm.valid" type="submit">
           Search
         </button>
       </form>
