@@ -23,7 +23,10 @@ export class CityDetailComponent implements OnInit {
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
+      console.log("param",params["cityId"]);
+      
       this.getCityById(params["cityId"]);
+      
       this.getPhotosByCity(params["cityId"]);
 
     })
@@ -31,6 +34,10 @@ export class CityDetailComponent implements OnInit {
   getCityById(cityId: number) {
     this.cityService.getCityById(cityId).subscribe(data => {
       this.city = data;
+      console.log("cityId",cityId);
+      console.log("this.city.id",this.city.id);
+      console.log("this.city",this.city);
+      
     })
   }
   getPhotosByCity(cityId: number) {

@@ -2,16 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { CityService } from 'src/services/city.service';
 import { FormGroup, FormControl, FormBuilder, Validators } from "@angular/forms";
 import { City } from 'src/app/models/city';
+
 @Component({
   selector: 'app-city-add',
   templateUrl: './city-add.component.html',
   styleUrls: ['./city-add.component.css'],
   providers: [CityService]
 })
+
 export class CityAddComponent implements OnInit {
 
   constructor(private cityService: CityService
-    , private formBuilder: FormBuilder) { }
+    , private formBuilder: FormBuilder
+    ) { }
 
   city!: City;
   cityAddForm!: FormGroup;

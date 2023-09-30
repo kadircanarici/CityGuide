@@ -10,6 +10,8 @@ import { CityComponent } from './city/city.component';
 import { CityDetailComponent } from "./city/city-detail/city-detail.component";
 import { CityAddComponent } from "./city/city-add/city-add.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AlertifyService } from "../services/alertify.service";
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AlertifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

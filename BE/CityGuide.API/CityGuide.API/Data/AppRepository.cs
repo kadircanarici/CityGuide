@@ -26,7 +26,7 @@ namespace CityGuide.API.Data
 
         public City GetCityById(int cityId)
         {
-            var city = _context.Cities.Include(c => c.Photos).FirstOrDefault();
+            var city = _context.Cities.Where(x=>x.Id==cityId).Include(c => c.Photos).FirstOrDefault();
 
             return city;
         }
