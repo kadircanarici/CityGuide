@@ -15,10 +15,10 @@ export class CityService {
     , private alertifyService: AlertifyService
     , private router: Router) { }
 
-  path = 'https://localhost:7268/api/';
+  path = 'http://localhost:5007/api/';
 
   getCities(): Observable<City[]> {
-    return this.httpClient.get<City[]>(this.path + 'cities');
+    return this.httpClient.get<City[]>(this.path + 'Cities');
   }
 
   getCityById(cityId: number): Observable<City> {

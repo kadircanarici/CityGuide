@@ -33,15 +33,14 @@
           </div>
         </li>
       </ul>
-      <form *ngIf="!isAuthenticated" #loginForm="ngForm" (ngSubmit)="login()" class="d-flex">
-        <input class="form-control me-sm-2" name="userName" [(ngModel)]="loginUser.userName" required type="text"
-          placeholder="User Name" />
-        <input class="form-control me-sm-2" name="password" [(ngModel)]="loginUser.password" required type="password"
-          placeholder="password" />
-        <button class="btn btn-secondary my-2 my-sm-0" [disabled]="!loginForm.valid" type="submit">
-          Search
-        </button>
+      <form *ngIf="!isAuthenticated" #loginForm="ngForm" (ngSubmit)="login()" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" name="userName" 
+        [(ngModel)]="loginUser.userName" required type="text" placeholder="User Name">
+        <input class="form-control mr-sm-2" name="password" 
+        [(ngModel)]="loginUser.password" required type="password" placeholder="Password">
+        <button class="btn btn-secondary my-2 my-sm-0" [disabled]="!loginForm.valid"  type="submit">Giriş</button>
       </form>
-    </div>
+        <button class="btn btn-secondary my-2 my-sm-0" *ngIf="isAuthenticated" (click)="logOut()" type="submit">Çıkış</button>
+      </div>
   </div>
 </nav>
